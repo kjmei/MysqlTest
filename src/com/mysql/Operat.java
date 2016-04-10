@@ -114,7 +114,6 @@ public class Operat {
 			while (rs.next()) {
 				stu = new Students();
 				stu.setStu_id(rs.getString("stu_id"));
-//				System.out.println(stu.getStu_id());
 				stu.setStu_name(rs.getString("stu_name"));
 				stu.setStu_gender(rs.getString("stu_gender"));
 				stu.setStu_age(rs.getString("stu_age"));
@@ -123,15 +122,10 @@ public class Operat {
 				stuList.add(stu);
 
 			}
-//			for(int i=0;i<stuList.size();i++){
-//				
-//				System.out.println(stuList.get(i).getStu_dept());
-//			}
-		} catch (SQLException e) {
+	} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		close();
 		return stuList;
 	}
